@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Siraj Ahmed | Fiverr Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: sans-serif; background: #1dbf73; color: #fff; margin: 0; padding: 0;}
+    nav { background: #fff; padding: 15px; position: fixed; width: 100%; top: 0; display: flex; justify-content: center; z-index: 999;}
+    nav button { background: #1dbf73; color: #fff; border: none; padding: 10px 15px; margin: 0 5px; cursor: pointer; border-radius: 6px; }
+    .section { display: none; padding: 80px 20px 30px; max-width: 1000px; margin: auto; }
+    .active { display: block; }
+    .card { background: #fff; color: #000; padding: 20px; border-radius: 12px; margin-bottom: 20px; }
+    .card img { border-radius: 8px; max-width: 100%; }
+    .info { display: flex; align-items: center; margin: 10px 0; }
+    .info img { width: 22px; margin-right: 8px; }
+    .button { background: #1dbf73; color: #fff; padding: 10px 16px; text-decoration: none; border-radius: 6px; display: inline-block; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <button onclick="showSection('profile')">Profile</button>
+  <button onclick="showSection('gigs')">Gigs</button>
+  <button onclick="showSection('reviews')">Reviews</button>
+  <a href="https://wa.link/uh2rj3" target="_blank" class="button">📱 WhatsApp Me</a>
+</nav>
+
+<!-- Profile Section -->
+<div id="profile" class="section active">
+  <h1>Siraj Ahmed | Profile</h1>
+  <div class="card">
+    <img src="https://i.ibb.co/9kHbSPxw/6823d19e-987e-49fa-85fd-aad5add2ea47.png" width="180">
+    <h2>AI Content Humanizer & Writer</h2>
+    <div class="info"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png">Started writing in 2021 — 5 years’ experience</div>
+    <div class="info"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">BBA (2018-2022) & MBA (2024-2026), Sukkur IBA University</div>
+    <div class="info"><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">Certified AI Writer — iWriting</div>
+    <div class="info"><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png">Coursera: Humanize AI Content</div>
+    <div class="info"><img src="https://cdn-icons-png.flaticon.com/512/633/633611.png">Total Fiverr Orders: 250+ | ⭐ 4.9 Average Rating</div>
+  </div>
+</div>
+
+<!-- Gigs Section -->
+<div id="gigs" class="section">
+  <h1>My Gigs</h1>
+  <div class="card">
+    <img src="https://i.ibb.co/KpVzktSf/humanize-ai-content-humanize-ai-content-humanize-ai-content-humanize-ai-content-humanize-ai-content.jpg">
+    <h2>Humanize AI Content</h2>
+    <p>Fix grammar, tone, and naturalize AI-generated text. Orders: 100+</p>
+    <a class="button" href="https://www.fiverr.com/s/BRePrYk" target="_blank">Order Now</a>
+  </div>
+  <div class="card">
+    <img src="https://i.ibb.co/ZR7B7qwW/SEO-blog-post-article-writing-website-content-SEO-blog-post-article-writing-website-content-SEO-blog.jpg">
+    <h2>Rewrite/Edit AI Content</h2>
+    <p>Polish AI content for flow, grammar, and native feel. Orders: 80+</p>
+    <a class="button" href="https://www.fiverr.com/s/yvaBNkA" target="_blank">Order Now</a>
+  </div>
+  <div class="card">
+    <img src="https://i.ibb.co/W493xM87/Edit-AI-Content-Humanize-Rewrite-chatgpt-ESSAYs-Edit-AI-Content-Humanize-Rewrite-chatgpt-ESSAYs-Edit.png">
+    <h2>Humanize Essays/Articles</h2>
+    <p>Convert AI essays into flawless, natural native English. Orders: 70+</p>
+    <a class="button" href="https://www.fiverr.com/s/P2DVgzp" target="_blank">Order Now</a>
+  </div>
+</div>
+
+<!-- Reviews Section -->
+<div id="reviews" class="section">
+  <h1>Client Reviews ⭐</h1>
+  <div class="card">
+    <h2>Humanize AI Content</h2>
+    <p>"Flawless humanizing. Reads like native English!" — John (USA)</p>
+  </div>
+  <div class="card">
+    <h2>Rewrite/Edit AI Content</h2>
+    <p>"Top-notch. I use Siraj every week." — Fatima (UAE)</p>
+  </div>
+  <div class="card">
+    <h2>Humanize Essays/Articles</h2>
+    <p>"Transformed my essay perfectly. No AI tone left!" — Ahmed (UK)</p>
+  </div>
+</div>
+
+<script>
+function showSection(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+<!-- ChatGPT Chatbot -->
+<script>
+(function(){
+if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};
+window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}
+const onLoad=function(){
+const script=document.createElement("script");
+script.src="https://www.chatbase.co/embed.min.js";
+script.id="pZ95YQx08dCPXPgXIWi46";
+script.domain="www.chatbase.co";
+document.body.appendChild(script)}
+;if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+
+</body>
+</html>
