@@ -14,6 +14,11 @@
     .card img { border-radius: 8px; max-width: 100%; }
     .info { display: flex; align-items: center; margin: 10px 0; }
     .info img { width: 22px; margin-right: 8px; }
+    .prices { display:flex; flex-direction:column; gap:15px; }
+    .price-card { padding: 20px; border-radius: 10px; color:#000; }
+    .price-card:nth-child(1){ background:#eafaf1; }
+    .price-card:nth-child(2){ background:#f0f9ff; }
+    .price-card:nth-child(3){ background:#fff6e5; }
   </style>
 </head>
 <body>
@@ -21,6 +26,7 @@
 <nav>
   <button onclick="showSection('profile')">Profile</button>
   <button onclick="showSection('gigs')">Gigs</button>
+  <button onclick="showSection('prices')">Prices</button>
   <button onclick="showSection('reviews')">Reviews</button>
   <a href="https://wa.link/uh2rj3" target="_blank" class="button">📱 WhatsApp Me</a>
 </nav>
@@ -86,6 +92,25 @@
   </div>
 
 </div>
+
+ <!-- Prices -->
+<div id="prices" class="section">
+  <h1>Pricing</h1>
+  <div class="prices">
+    <div class="price-card">
+      <h3>Basic — $14.25</h3>
+      <p>300 words, Copy edit, Proofreading, Formatting, Feedback, Plagiarism check, AI detection.</p>
+    </div>
+    <div class="price-card">
+      <h3>Standard — $28.50</h3>
+      <p>600 words + SEO optimization, Copy edit, Proofreading, Formatting, Feedback, Plagiarism check, AI detection.</p>
+    </div>
+    <div class="price-card">
+      <h3>Premium — $47.50</h3>
+      <p>1000 words, Revision, Copy edit, Proofreading, Formatting, Feedback, Plagiarism check, AI detection & SEO polish.</p>
+    </div>
+  </div>
+</div> 
 
 <!-- Reviews Section -->
 <div id="reviews" class="section">
