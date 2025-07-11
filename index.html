@@ -349,23 +349,33 @@
   </div>
 </div>
 
-  
+  <!-- ChatGPT Chatbot via Chatbase -->
 <script>
-function showSection(id){
-  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-}
-  <!-- Chatbase Chatbot (Safe Placement) -->
-<script>
-  window.addEventListener("load", function () {
-    const script = document.createElement("script");
-    script.src = "https://www.chatbase.co/embed.min.js";
-    script.id = "-hojK-6GDBJC1IOaIncwo"; // ✅ Your new chatbot ID
-    script.setAttribute("chatbase", "-hojK-6GDBJC1IOaIncwo");
-    script.setAttribute("domain", "www.chatbase.co");
-    document.body.appendChild(script);
-  });
+(function(){
+  if(!window.chatbase || window.chatbase("getState")!=="initialized"){
+    window.chatbase=(...arguments)=>{
+      if(!window.chatbase.q){window.chatbase.q=[]}
+      window.chatbase.q.push(arguments)
+    };
+    window.chatbase=new Proxy(window.chatbase,{
+      get(target,prop){
+        if(prop==="q"){return target.q}
+        return(...args)=>target(prop,...args)
+      }
+    });
+  }
+  const onLoad=function(){
+    const script=document.createElement("script");
+    script.src="https://www.chatbase.co/embed.min.js";
+    script.id="-hojK-6GDBJC1IOaIncwo";  // updated chatbot ID here
+    script.domain="www.chatbase.co";
+    document.body.appendChild(script)
+  };
+  if(document.readyState==="complete"){onLoad()}
+  else{window.addEventListener("load",onLoad)}
+})();
 </script>
+
 
 <!-- Global Footer (Visible on All Sections) -->
 <footer style="background-color: #ffffff; color: #333; font-size: 14px; text-align: center; padding: 10px 15px; border-top: 1px solid #ccc;">
