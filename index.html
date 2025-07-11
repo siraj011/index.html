@@ -355,21 +355,41 @@ function showSection(id){
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 }
-</script>
-
-<!-- ChatGPT Chatbot -->
+  
+<!-- ChatGPT Chatbot (Updated Script) -->
 <script>
 (function(){
-if(!window.chatbase||window.chatbase("getState")!=="initialized"){
-window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};
-window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}
-const onLoad=function(){
-const script=document.createElement("script");
-script.src="https://www.chatbase.co/embed.min.js";
-script.id="pZ95YQx08dCPXPgXIWi46";
-script.domain="www.chatbase.co";
-document.body.appendChild(script)}
-;if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+  if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+    window.chatbase = (...arguments) => {
+      if (!window.chatbase.q) {
+        window.chatbase.q = [];
+      }
+      window.chatbase.q.push(arguments);
+    };
+    window.chatbase = new Proxy(window.chatbase, {
+      get(target, prop) {
+        if (prop === "q") {
+          return target.q;
+        }
+        return (...args) => target(prop, ...args);
+      }
+    });
+  }
+
+  const onLoad = function () {
+    const script = document.createElement("script");
+    script.src = "https://www.chatbase.co/embed.min.js";
+    script.id = "-hojK-6GDBJC1IOaIncwo"; // ✅ your new bot ID
+    script.domain = "www.chatbase.co";
+    document.body.appendChild(script);
+  };
+
+  if (document.readyState === "complete") {
+    onLoad();
+  } else {
+    window.addEventListener("load", onLoad);
+  }
+})();
 </script>
 
 <!-- Global Footer (Visible on All Sections) -->
